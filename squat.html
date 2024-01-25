@@ -5,12 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <button class="return__button" id="return__button" type="submit"
-    onclick="document.location.href='/index.html'">&larr;</button>
-    <script src="script.js"></script>
+    <nav class="navbar">
+        <div class="container"><button class="return__button" id="return__button" type="submit"
+                onclick="document.location.href='/index.html'">&larr;</button>
+            <button class="profile__button" id="profile__button" type="submit"
+                onclick="document.location.href='/profile.html'">Profile</button>
+            <button class="open__modal" id="open__modal">?</button>
+        </div>
+    </nav>
+    <main>
+        <section class="perform">
+            <canvas class="squat__canvas" id="squat__canvas"></canvas>
+        </section>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal__inner">
+            <h2>How to perform exercise</h2>
+            <p>To perform every exercise you have to try and visualise how it is performed in real life. In this case
+                you must swipe correctly in this pattern: &uarr; &darr; &uarr;</p>
+                <button class="close__modal" id="close__modal">Close</button>
+        </div>
+    </div>
+
+    <script type="module" src="squat_script.js"></script>
+    <script type="module" src="modal_script.js"></script>
 </body>
 
 </html>
